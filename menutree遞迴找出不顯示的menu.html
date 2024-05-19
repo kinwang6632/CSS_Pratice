@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        parent: {
+          id: 0,
+          name: "root",
+          show: true,
+          children: [
+            {
+              parent: {
+                id: 1,
+                name: "parent1",
+                show: true,
+                children: [
+                  {
+                    parent: {
+                      id: 2,
+                      name: "parent2",
+                      show: true,
+                      children: [
+                        {
+                          parent: {
+                            id: 3,
+                            name: "parent3",
+                            show: false,
+                            children: [],
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              parent: {
+                id: 4,
+                name: "parent4",
+                children: [
+                  {
+                    parent: {
+                      id: 5,
+                      name: "parent5",
+                      children: [],
+                      show: true,
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      };
+      var obj2 = JSON.parse(JSON.stringify(obj));
+      //找出不要顯示的節點
+      function GetAll(obj) {
+        if (obj.children !== null && obj.children.length > 0) {
+          obj.children.forEach((element) => {
+            console.log("b", element.parent.name);
+            if (element.parent) {
+              if (element.parent.show === false) {
+                GetAll2(obj2.parent, element.parent.id);
+              }
+              GetAll(element.parent);
+            }
+            console.log("e", element.parent.name);
+          });
+        } else {
+          return;
+        }
+      }
+      //真正要移除節點的function
+      function GetAll2(obj2, id, prvParent) {
+        if (obj2.children !== null && obj2.children.length > 0) {
+          obj2.children.forEach((element) => {
+            if (element.parent) {
+              if (element.parent.id === id) {
+                prvParent.parent.children = prvParent.parent.children.filter(
+                  (x) => x.parent.id !== id
+                );
+                return;
+              } else {
+                GetAll2(element.parent, id, element);
+              }
+            }
+          });
+        } else {
+          return;
+        }
+      }
+
+      GetAll(obj.parent);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 1000px;
+        height: 900px;
+        background-color: #888;
+        display: flex;
+        margin: 0 auto 10px;
+
+        /*主軸默認值，由左到右*/
+        flex-direction: row;
+        /*主軸方向改為由上到下*/
+        /* flex-direction: column; */
+
+        /*主軸換行方式，默認為nowrap*/
+        flex-wrap: wrap;
+
+        /*主軸對齊方式，默認為flex-start*/
+        justify-content: center;
+
+        /*側軸對齊方式,默認值為stretch*/
+        align-items: baseline;
+        align-items: stretch; /* 項目height沒有設定才會有用 */
+        align-items: start;
+
+        /*側軸對齊方式(多行)默認值為stretch*/
+        align-content: flex-start;
+        align-content: center;
+        align-content: space-around;
+        align-content: space-between;
+        align-content: stretch; /* 項目height沒有設定才會有用 */
+      }
+
+      /*項目在主軸的長度、寛度，會覆蓋原本自己寫的長度或高度，默認值為auto */
+      .inner22 {
+        flex-basis: 400px;
+      }
+      /*如果主軸空間有剩，則剩餘空間平均分配*/
+      .innergrow {
+        flex-grow: 1;
+      }
+      /*如果主軸空間有剩，則剩餘空間平均分配，flex-wrap: nowrap才會有用 */
+      .innergrow {
+        flex-shrink: 1;
+      }
+
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+      /* .outer > .inner:nth-child(2) {
+            background-color: red;
+        } */
+      .outer > div:nth-of-type(1) {
+        background-color: blue;
+      }
+      .inner2 {
+        height: 300px;
+        width: 400px;
+      }
+      .inner3 {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+      <div class="inner">5</div>
+      <div class="inner">6</div>
+      <div class="inner">7</div>
+      <div class="inner">8</div>
+      <div class="inner">9</div>
+      <div class="inner">10</div>
+      <div class="inner">11</div>
+    </div>
+    <div class="outer">
+      <div class="inner innergrow">1</div>
+      <div class="inner inner2 innergrow">2</div>
+      <div class="inner inner3 innergrow">3</div>
+    </div>
+  </body>
+</html>

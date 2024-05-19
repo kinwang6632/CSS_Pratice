@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 400px;
+            background-color: gray;
+            padding: 10px;
+            text-align: center;
+        }
+        .box {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box1 {
+            background-color: skyblue;
+        }
+        .box2 {
+            background-color: orange;
+            float: left;
+            margin: 20px;
+            /*
+                1.後寛高默認是被內容撐開(但可以設定)
+                2.與其它元素共用一行
+                3.margin可以與其它元素完全結合            
+                4.不能像文字一樣可以控制水平居中(父元素設text-align:center,浮動元素不會跑到中間)            
+            */
+        }
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+    </div>
+</body>
+</html>

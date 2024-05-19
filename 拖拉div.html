@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draggable Div</title>
+<style>
+  #container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: #ddd;
+  }
+  #draggable {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #333;
+    color: white;
+    cursor: move;
+  }
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div id="draggable">拖我</div>
+</div>
+
+<script>
+// 获取元素
+var container = document.getElementById('container');
+var draggable = document.getElementById('draggable');
+
+// 初始化变量
+var isDragging = false;
+var x = 0;
+var y = 0;
+
+// 鼠标按下事件
+draggable.addEventListener('mousedown', function(e) {
+  // 获取鼠标位置和元素当前位置的差值
+  x = e.clientX - draggable.getBoundingClientRect().left;
+  y = e.clientY - draggable.getBoundingClientRect().top;
+  isDragging = true;
+});
+
+// 鼠标移动事件
+document.addEventListener('mousemove', function(e) {
+  if (isDragging) {
+    // 计算新位置
+    var moveX = e.clientX - x;
+    var moveY = e.clientY - y;
+
+    // 获取父容器的边界
+    var containerRect = container.getBoundingClientRect();
+    
+    // 确保拖曳不超出容器范围
+    moveX = Math.min(Math.max(0, moveX), containerRect.width - draggable.offsetWidth);
+    moveY = Math.min(Math.max(0, moveY), containerRect.height - draggable.offsetHeight);
+
+    // 更新元素位置
+    draggable.style.left = moveX + 'px';
+    draggable.style.top = moveY + 'px';
+  }
+});
+
+// 鼠标松开事件
+document.addEventListener('mouseup', function() {
+  isDragging = false;
+});
+</script>
+
+</body>
+</html>

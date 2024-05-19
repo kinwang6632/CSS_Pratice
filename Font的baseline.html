@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 40px;            
+            background-color: aqua;
+            color: red;
+            line-height: 60px;    
+            vertical-align: top;        
+            
+        }
+        span {
+            font-size: 300px;
+            line-height: 450px;
+            color: blue;
+            vertical-align: center;
+        }
+        #sp {
+            
+            font-size: 40px;
+            color: green;
+        }
+        #div1 {
+            background-color: yellow;
+            line-height: 100px;
+            
+            /* vertical-align: bottom;  不能直接控制垂直方向 */
+        }
+        #sp1 {
+            font-size: inherit;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div>x測試用AB王x<span>x測試用</span><span id="sp">用AB王</span></div>
+    <div id="div1">1111<span id="sp1">測試用</span></div>
+</body>
+</html>

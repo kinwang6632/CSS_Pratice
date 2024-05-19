@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 400px;
+        /* height: 400px; */
+        background-color: gray;
+      }
+      .inner1 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin-top: 50px; /* 此行會被父元素搶走*/
+      }
+      .inner2 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin-bottom: 50px; /*此行會被父元素搶走*/        
+      }
+      /* 1.父元素border 設定有值
+        2.父元素padding 設定有值
+        3.overflow:hidden */
+
+      /*這可以讓文字可以不用受到字型影嚮，讓文字絕對居中*/
+      .d1{
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        line-height: 400px;        
+        font-size: 0px; /*讓字型不受基線影嚮，可以讓文字絕對居中 */
+        text-align: center;        
+      }
+      span {
+
+        vertical-align: middle;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner1"></div>
+      <div class="inner2"></div>
+    </div>
+    <div class="d1">
+      
+      <span>測試用</span> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*只找相鄰的元素，所以div下面如果是其它元素例..h1，則完全沒任何效果*/
+      /* div + p {
+        color: red;
+      } */
+
+      /*所有相鄰元素都會被選中*/
+      div ~ p {
+        color: red;
+      }
+      /*第一li與第二個li相鄰，第二個li與第三個li相鄰..以此類推*/
+      li+li {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div1</div>
+    <h1>h1</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 600px;
+        height: 400px;
+        background-color: skyblue;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        float: left; /*開啟後可以環繞文字，也是最初期的目的*/
+      }
+      .div1 {
+        background-color: yellow;
+        width: auto;
+        float: right;
+        --margin-left: 10px;
+      }
+      .div2 {
+        background-color: blue;     
+        width: clamp(200px ,50%, 400px);
+        float: left; /*開啟後可以環繞文字，也是最初期的目的*/
+        --margin-right: 10px;
+      }
+      .div3 {
+        background-color: green;
+        width: auto;
+        height: 500px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="imgs/1.png" alt="" />
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, nulla.
+      Fugiat vitae minus at natus autem libero, voluptate iste eligendi placeat
+      veritatis numquam quis magnam quasi voluptas officiis soluta dolores
+      deserunt enim optio illum neque? Soluta rem facere suscipit perferendis
+      totam repellat numquam ducimus molestiae iure, voluptatibus quas minus
+      voluptate, neque id eos, dolorum officiis amet veritatis nemo inventore ea
+      repudiandae! Expedita, consequuntur ipsum necessitatibus illum veritatis
+      et accusamus sunt aperiam quas laborum hic laudantium placeat incidunt
+      numquam, voluptate ratione in voluptatibus labore culpa debitis atque
+      libero veniam optio. Optio incidunt ipsum assumenda pariatur magnam
+      recusandae laborum ratione labore laudantium voluptatibus autem cupiditate
+      voluptate consequuntur laboriosam praesentium minima quaerat eaque odio,
+      consequatur facere alias. In magni asperiores laudantium reiciendis, unde
+      sit deleniti perferendis doloremque nostrum expedita voluptas repellendus
+      
+    </div>
+    <div class="div1">div1</div>
+    <div class="div2">div1</div>
+    <div class="div3">
+      <p style="margin: 0 auto;text-align: center;">div para</p>
+    </div>
+  </body>
+</html>

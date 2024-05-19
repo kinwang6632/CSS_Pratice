@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div > p:last-child {
+        color: red;
+      }
+      /* 代表所有子元素第3位數為p元素都會被選中 */
+      /* div > p:nth-child(3n) {
+            color: red;
+        } */
+
+      /*代表選中-1*0+5,-1*1+5,-1*2+5....，所以是選中前5個*/
+      /* div > p:nth-child(-n + 5) {
+        color: blue;
+      } */
+      
+      /*只找同類型元素*/
+      /* div > p:first-of-type {
+        color: blue;
+      } */
+
+      /*只找同類型元素*/
+      div > p:nth-of-type(3) {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>span</span>
+      <p>p1</p>
+      <p>p2</p>
+      <p>p3</p>
+      <p>p4</p>
+      <p>p5</p>
+      <p>p6</p>
+    </div>
+  </body>
+</html>

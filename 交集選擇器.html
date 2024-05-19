@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hClass1 {
+            color: gold;
+        }
+        .hClass2 {
+            color: red;
+        }
+        /*先選元素，然後直接寫class,再寫id,但通常是寫元素+class,因為id是唯一*/
+        /* p.hClass2#p1 {
+            color: green;
+        } */
+        p.hClass2 {
+            color: green;
+        }
+        .div1{
+            font-size: 0px;
+            height: 20px;            
+
+        }
+        .div1>input{
+            font-size: 20px;
+            box-sizing:border-box;
+            height: 22px;
+        }
+        .div1>button {
+            box-sizing: border-box;
+            vertical-align: top;
+            height: 22px;
+        }
+        .div2 {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 class="hClass1">h2-1</h2>
+    <h2 class="hClass2">h2-2</h2>
+    <hr>
+    <p class="hClass2" id="p1">p1</p>
+    <p class="hClass2">p2</p>
+    <div style="width: 500px;height: 200px;background-color: green;font-size: 200px;line-height: 200px;">
+       x <span style="vertical-align: middle; font-size: 20px;line-height: 20px;">12313213</span>
+    </div>
+    <div class="div1">
+        <input type="text" value="xxxx">
+        <span>x</span>
+        <button>xxx</button>
+    </div>
+    <div class="div2">
+        afadfadfafa
+    </div>
+</body>
+</html>

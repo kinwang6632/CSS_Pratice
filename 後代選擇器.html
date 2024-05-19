@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*不管多深都能找得到*/
+        ul li {
+            color: red;
+        }
+        ol li {
+            color: green;
+        }
+        /*其實可以簡寫ul a就好*/
+        ul li a {
+            color: orange;
+        }
+        ol li a {
+            color: brown;
+        }
+        .olclass li {
+            color: cadetblue;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>
+            <a href="#">ul->li->a</a>
+        </li>
+        <div>
+            <li>div->li</li>
+        </div>
+    </ul>
+    <hr>
+    <ol>
+        <li>ol1</li>
+        <li>
+            <a href="#">ol->li-a</a>
+        </li>        
+        <li>ol3</li>
+    </ol>
+    <ol class="olclass">
+        <li>olclass li1</li>
+        <li>olclass li2</li>
+        <li>olclass li3</li>
+        <li>olclass li4</li>
+        <li>olclass li5</li>
+    </ol>
+</body>
+</html>

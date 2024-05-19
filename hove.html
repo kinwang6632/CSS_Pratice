@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub {
+            background-color: aquamarine;
+            width: 700px;
+            height: 500px;
+            position: absolute;
+            top:0;
+            left:150px;
+            display: none;
+            
+        }
+        ul {
+            position: relative;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            width: 150px;
+            -height: 40px;
+            line-height: 40px;
+            background-color: aliceblue;
+        }
+        li:hover {
+            background-color: red;
+        }
+        li:hover .sub {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Second Page</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Third Page</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Fourth Page</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Fifth Page</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Sixth Page</a>
+                <div class="sub"></div>
+            </li>
+            <li>
+                <a href="#">Seventh Page</a>
+                <div class="sub"></div>
+                <p>This is a sub menu</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

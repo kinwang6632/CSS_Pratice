@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 30px;
+        }
+        /*每個字母之間距離，中文有效,可以設定負值*/
+        .div2 {
+            letter-spacing: 20px;
+        }
+        /*單字之間距離，中文無效，但加空白就有作用*/
+        .div3 {
+            word-spacing: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div class="div2">
+        Lorem, ipsum dolor. 測試使用
+    </div>
+    <div class="div3">
+        Lorem, ipsum dolor.測 試使用
+    </div>
+    <a href="#">測試連結</a>
+</body>
+</html>

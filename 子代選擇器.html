@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       div > a {
+        color: red;
+      }
+      div > p > a {
+        color: skyblue;
+      }
+      .foot > a {
+        color: blue;        
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#">a1</a>
+      <a href="#">a2</a>
+      <a href="#">a3</a>
+      <p>
+        <a href="#">p1->a1</a>
+        <div class="foot">
+            <a href="#">p->div->a1</a>
+            
+        </div>
+      </p>
+    </div>
+    <div>
+      <input type="text" style="height: 30px;" >
+      <input type="button" value="Click" style="height: 36px;padding: 0px,2px;" >
+    </div>
+    <form action="">
+      <input type="text" list="mydata">
+    </form>
+    <datalist id="mydata">
+        <option value="AAAA">A</option>
+        <option value="BBB">B</option>
+        <option value="AAC">AC</option>
+        <option value="BAAA">A</option>
+    </datalist>
+  </body>
+</html>

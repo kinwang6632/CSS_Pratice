@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*行內 > ID >Class > 元素 >通用*/
+      #myid {
+        color: red;
+      }
+      h2 {
+        color: orange;
+      }
+      .myclass {
+        color: green;
+      }
+      h2 {
+        color: gray;
+      }
+      * {
+        color: purple;
+      }
+
+      /*權重計算(a,b,c) */
+      /* a:ID選擇器的個數*/
+      /* b:類、偽類、屬性 個數*/
+      /* c:元素、偽元素 個數*/
+      .container span.slogan {
+        /*(0,2,1)*/
+        color: red;
+      }
+      div > p > span:nth-child(1) {
+        /*(0,1,3)*/
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="myclass" id="myid">h2</h2>
+    <div class="container">
+      <p>
+        <span class="slogan">Lorem ipsum dolor sit amet. </span>
+        <span>Lorem ipsum dolor sit amet consectetur.</span>
+      </p>
+    </div>
+  </body>
+</html>
