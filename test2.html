@@ -1,0 +1,40 @@
+@addTagHelper *, Test
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <div>
+      @{ if (ViewBag.Error!= null) {
+      <p style="color: red">@ViewBag.Error</p>
+      } }
+      <form asp-action="Login" method="post">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </form>
+      <a asp-action="GoogleLogin">google</a>
+      <a asp-action="FacebookLogin">facebook</a>
+      <a asp-action="LineLogin">LineLogin</a>
+      <a asp-action="Logout">Logout</a>
+      <a asp-action="Job">job</a>
+      @* @await Component.InvokeAsync("Test") *@
+      <vc:test></vc:test>
+      @{ ViewData["XXX"] = "XXX"; ViewData["YYY"] = "YYY"; } @await
+      Html.PartialAsync("MyPartialView")
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function (event) { 
+            alert("Hello World!");
+        })
+    </script>
+  </body>
+</html>

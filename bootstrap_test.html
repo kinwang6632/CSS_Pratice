@@ -34,10 +34,15 @@
         margin-bottom: 10px;
         margin-right: 5px;
       }
+      span {
+        font-size: 20px;
+        color: red;
+      }
     </style>
   </head>
   <body>
-    <!-- <div class="container-xl container-fluid">
+    
+    <!-- <div class="container-xl container-fluid container-md container-sm container-xs">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus beatae excepturi voluptas temporibus illum quis vitae dignissimos natus voluptatem, suscipit distinctio hic fugit asperiores velit, atque quibusdam deserunt aperiam maxime.
         Corporis facere, repellat tenetur iusto, eligendi saepe ut repudiandae sapiente possimus, cum ea labore inventore? Assumenda sapiente hic harum quod, id ipsam sed iure in soluta blanditiis, odio magnam expedita.
         Ut totam laudantium nam id debitis sed magnam, pariatur neque culpa ad saepe minus illum a est sapiente molestiae, rem fugiat iste consequuntur eius. Iusto aliquid saepe id quas provident.
@@ -65,15 +70,18 @@
     <div class="size-indicator d-none d-lg-block d-xl-none">lg</div>
     <div class="size-indicator d-none d-xl-block d-xxl-none">xl</div>
     <div class="size-indicator d-none d-xxl-block">xxl</div>
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-2">
           <div class="row g-1">
             <div class="col">
                 <div class="box"></div>
             </div>
             <div class="col">
                 <div class="box"></div>
+            </div>
+            <div class="col">
+              <div class="box"></div>
             </div>
           </div>
         </div>
@@ -84,7 +92,7 @@
           <div class="box"></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="container">
       <div class="row">
@@ -94,14 +102,14 @@
         <div class="col-2">
           <div class="box"></div>
         </div>
-        <div class="col-2 offset-lg-6">
+        <div class="col-2 offset-md-6">
           <div class="box"></div>
         </div>
       </div>
     </div> -->
 
     <!-- <div class="container">
-        <div class="row gy-3">
+        <div class="row g-3">
           <div class="col-12 col-md col-xl-2">
             <div class="box"></div>
           </div>
@@ -114,10 +122,9 @@
         </div>
       </div> -->
 
-    
     <!-- md 以上都是三列，md 以下是一列 -->
-    <!-- <div class="container m-3">
-        <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="container m-3">
+        <div class="row row-cols-2 row-cols-md-3 g-3">
           <div class="col">
             <div class="box"></div>
           </div>
@@ -128,7 +135,6 @@
             <div class="box"></div>
           </div>
         </div>
-      </div> -->
-
+      </div>
   </body>
 </html>
