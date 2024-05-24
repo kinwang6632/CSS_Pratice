@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] :focus {
+        border-radius: 0%;
+      }
+    </style>
+  </head>
+  <body class="bg-secondary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-7">
+          <div class="row gy-3">
+            <div class="col-12">
+              <div class="row">
+                <label for="order-fun" class="col-auto col-form-label"
+                  >功能</label
+                >
+                <div class="col-3" style="width: 300px">
+                  <select class="form-select form-select-sm" id="order-fun">
+                    <option value="1">新增</option>
+                    <option value="2">修改</option>
+                    <option value="3">刪除</option>
+                  </select>
+                </div>
+                <label for="order-date" class="col-auto col-form-label"
+                  >配送日期</label
+                >
+                <div class="col-3">
+                  <input
+                    type="date"
+                    class="form-control form-control-sm"
+                    id="order-date"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card shadow-none">
+                <div
+                  class="row justify-content-start align-items-center ms-1 mt-3"
+                >
+                  <div class="col-auto">
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="prod-Group"
+                        id="prod-catogory"
+                        checked
+                      />
+                      <label for="prod-catogory" class="form-check-label"
+                        >料品類別</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-2" style="width: 230px">
+                    <select class="form-select form-select-sm" id="order-fun">
+                      <option value="1">新增</option>
+                      <option value="2">修改</option>
+                      <option value="3">刪除</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="prod-Group"
+                        id="prod-Search"
+                        checked
+                      />
+                      <label for="prod-Search" class="form-check-label"
+                        >料品類別</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <select class="form-select form-select-sm" id="order-fun">
+                      <option value="1">新增</option>
+                      <option value="2">修改</option>
+                      <option value="3">刪除</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <table class="table table- mt-3" style="table-layout: fixed;" >
+                      <thead>
+                        <tr>
+                          <th>序號</th>
+                          <th>料號</th>
+                          <th colspan="3">品名</th>                          
+                          <th class="text-center">配送單位</th>
+                          <th>配送/基本</th>
+                          <th>基本單位</th>
+                          <th>單價</th>
+                          <th style="width: 120px;">數量</th>
+                          <th>加入</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>SF017</td>
+                          <td colspan="3">十全味增</td>                          
+                          <td class="text-center">箱</td>
+                          <td>20</td>
+                          <td>BAG</td>
+                          <td>77</td>
+                          <td>
+                            <div class="d-flex flex-row justify-content-between">
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#CCCCCC" class="bi bi-dash-square" viewBox="0 0 16 16">
+                                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                                </svg>
+                              </div>
+                              <div>
+                                <input type="number" class="form-control form-control-sm border border-0 text-center" value="0" />
+                              </div>
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                                  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex flex-row justify-content-start align-items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                              </svg>
+                            <div/>
+                           
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">pagination</div>
+          </div>
+        </div>
+        <div class="col-5"></div>
+      </div>
+    </div>
+  </body>
+</html>
