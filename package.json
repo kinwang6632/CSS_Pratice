@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "element-plus": "^2.7.3",
     "vuejs-paginate-next": "^1.0.2"
   }
 }

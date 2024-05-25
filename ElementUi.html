@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Script/Element.css" />
+    <script src="./Script/vue.global.js"></script>
+    <script src="./Script/Element.full.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <el-button @click="showmsg3" type="primary">Hello Element-Plus</el-button>
+      <el-date-picker
+        v-model="value1"
+        type="date"
+        placeholder="挑選日期"
+        format="YYYY/MM/DD"
+      ></el-date-picker>
+      <el-pagination layout="prev, pager, next" :total="50" />
+    </div>
+    <script>
+      const { ElMessage, Action, ElMessageBox, ElLoading } = ElementPlus;
+      const myloading = ElLoading.service({
+        lock: true,
+        background: "rgba(0, 0, 0, 0.7)",
+      });
+      myloading.close();
+      const app = Vue.createApp({
+        data() {
+          return {
+            value1: "",
+            size: "default",
+            loading: true,
+          };
+        },
+        methods: {
+          showmsg() {
+            ElMessageBox.alert("This is a message", {
+              confirmButtonText: "確認",
+              cancelButtonText: "取消",
+              "show-cancel-button": true,
+              callback: (action) => {
+                console.log(action);
+                console.log(this.size);
+              },
+            });
+          },
+          showmsg2() {
+            this.$loading({
+              lock: true,
+              text: "Loading",
+              background: "rgba(0, 0, 0, 0.7)",
+              visible: this.loading,
+            });
+            setTimeout(() => {
+              this.$loading({
+                fullscreen: false,
+              });
+            }, 2000);
+          },
+          showmsg3() {
+            const loading = app.config.globalProperties.$loading({
+              lock: true,
+              text: "Loading",
+              background: "rgba(0, 0, 0, 0.7)",
+            });
+
+            setTimeout(() => {
+              loading.close();
+              this.$showError("出錯了");
+              
+            }, 2000);
+          },
+        },
+      });
+      app.use(ElementPlus);
+      app.config.globalProperties.$showError = function (msg) {
+        this.$message({
+          type: "error",
+          message: msg,
+          duration: 5000,
+          showClose: true,
+        });
+      };
+      
+      app.mount("#app");
+    </script>
+  </body>
+</html>
